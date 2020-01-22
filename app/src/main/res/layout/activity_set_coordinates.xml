@@ -1,0 +1,87 @@
+<RelativeLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width =  "match_parent"
+    android:layout_height = "match_parent" >
+
+    <LinearLayout
+        android:id = "@+id/latitudeLayout"
+        android:layout_width =  "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation = "horizontal" >
+
+        <TextView
+            android:text="Latitude: "
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textAppearance = "?android:textAppearanceLarge"
+            android:textColor = "@android:color/black"
+            android:textStyle = "bold"/>
+
+        <TextView
+            android:id = "@+id/latitudeView"
+            android:text = "28.20"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textAppearance = "?android:textAppearanceLarge"
+            android:textColor = "@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id = "@+id/longitudeLayout"
+        android:layout_width =  "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation = "horizontal"
+        android:layout_below = "@id/latitudeLayout"
+        android:paddingBottom= "20dp" >
+
+        <TextView
+            android:text="Longitude: "
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textAppearance = "?android:textAppearanceLarge"
+            android:textColor = "@android:color/black"
+            android:textStyle = "bold"/>
+
+        <TextView
+            android:id = "@+id/longitudeView"
+            android:text = "77.96"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textAppearance = "?android:textAppearanceLarge"
+            android:textColor = "@android:color/black" />
+    </LinearLayout>
+
+    <EditText
+        android:id = "@+id/latitude_text"
+        android:hint = "Latitude"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:inputType = "numberDecimal"
+        android:layout_below = "@id/longitudeLayout"
+        android:paddingBottom= "20dp" />
+
+    <EditText
+        android:id = "@+id/longitude_text"
+        android:hint = "Longitude"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:inputType = "numberDecimal"
+        android:layout_below = "@id/latitude_text"
+        android:paddingBottom= "20dp" />
+
+    <Button
+        android:id = "@+id/setButton"
+        android:text = "SET"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:foreground = "?attr/selectableItemBackground"
+        android:background = "@android:color/holo_blue_bright"
+        android:textAppearance = "?android:textAppearanceMedium"
+        android:textColor = "@android:color/black"
+        android:textStyle = "bold"
+        android:layout_centerInParent="true"
+        android:paddingRight = "8dp"
+        android:paddingLeft = "8dp" />
+
+</RelativeLayout>
